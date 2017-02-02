@@ -48,3 +48,7 @@ Finally, you push these new commits from my local machine to the remote reposito
 ```bash
 git push
 ```
+
+## Mandatory Screenshot
+
+![Screenshot of my desktop](Capture.PNG)
