@@ -1,6 +1,6 @@
 function setup() {
 createCanvas(500,500)
-background(0,253,242)
+background(153,204,255)
 }
 
 function draw() {
@@ -48,7 +48,8 @@ function draw() {
 
 //mouth
   push();
-
+  translate(170,155);
+  arc(80,80,30,30,0,PI+QUARTER_PI,CHORD);
   pop();
 
   //nose
@@ -78,8 +79,38 @@ function draw() {
 //left whiskers
   push();
   translate(190,180);
-  line(2, 5, 40, 20);
+  line(6, 16, 43, 22);
   pop();
 
+  push();
+  translate(190,180);
+  line(6, 25, 43, 22);
+  pop();
 
+  push();
+  translate(190,180);
+  line(6, 32, 43, 22);
+  pop();
+
+  //text
+  push();
+  fill(255,0,0);
+  textSize(48);
+  textFont("Mesquite Std");
+  text("Courtney Thomas", 155, 55);
+
+  pop();
+
+  //collar
+  push();
+  translate(160,265);
+  fill(255, 51, 51);
+  rect(30, 20, 120, 20, 20);
+  pop();
+
+  push();
+  translate(205,282);
+  fill(255,255,0);
+  rect(30, 20, 30, 30, 25);
+  pop();
 }
