@@ -1,11 +1,12 @@
 // The midi notes of a scale
-var notes = [ 60, 62, 64, 65, 67, 69, 71];
+var notes = [ 50, 62, 64, 65, 67, 69, 71];
 var noteColor;
+var guitar = [];
 
-// For automatically playing the song
+// To automatically play the song
 var index = 0;
 var song = [
-  { note: 4, duration: 400, display: "D" },
+  { note: 4, duration: 400, display: "G" },
   { note: 0, duration: 200, display: "G" },
   { note: 1, duration: 200, display: "A" },
   { note: 2, duration: 200, display: "B" },
@@ -17,6 +18,13 @@ var song = [
 var trigger = 0;
 var autoplay = false;
 var osc;
+
+function preload(){
+  // img = loadImage("Vis/Cat.jpg");
+  guitar[0] = loadSound("Assets/StringD1.mp3");
+}
+
+
 
 function setup() {
   createCanvas(720, 400);
@@ -104,13 +112,16 @@ function draw() {
       rect(x, 0, w-1, height-1);
     }
 
+
   }
 
   // When we click
   function mousePressed() {
+
     // Map mouse to the key index
     var key = floor(map(mouseX, 0, width, 0, notes.length));
-    playNote(notes[key]);
+    // playNote(notes[key]);
+    guitar[0].play(0, map(key,0,6,1,4));
   }
 
   // Fade it out when we release
