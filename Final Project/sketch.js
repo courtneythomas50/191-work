@@ -19,8 +19,8 @@ var trigger = 0;
 var autoplay = false;
 var osc;
 
+// Upload Sound Effect
 function preload(){
-  // img = loadImage("Vis/Cat.jpg");
   guitar[0] = loadSound("Assets/StringD1.mp3");
 }
 
@@ -45,6 +45,7 @@ function setup() {
   osc.start();
   osc.amp(0);
 
+// Define each individual note color
   noteColor = [
     color(255,0,0),
     color(0,255,0),
@@ -84,7 +85,7 @@ function draw() {
     }
 
 
-    // Draw a keyboard
+    // Draw keyboard
 
     // The width for each key
     var w = width / notes.length;
